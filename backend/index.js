@@ -1,5 +1,9 @@
+import connectDB from './config/db.js'
 
-import express from "express"
+import dotenv from 'dotenv'
+dotenv.config()
+import express from 'express'
 const app = express()
 const port = 5000
-app.listen(port,()=>console.log(`the port running at ${port}`))
+connectDB()
+app.listen(port, () => console.log(`the port running at ${port}`))
